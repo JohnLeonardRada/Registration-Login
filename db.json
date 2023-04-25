@@ -43,7 +43,7 @@
       "email": "admin@email.com",
       "gender": "male",
       "role": "staff",
-      "isactive": true
+      "isactive": false
     },
     {
       "id": "test5",
@@ -51,8 +51,8 @@
       "password": "Admin123!",
       "email": "admin@email.com",
       "gender": "male",
-      "role": "",
-      "isactive": true
+      "role": "staff",
+      "isactive": false
     },
     {
       "id": "ycewolf",

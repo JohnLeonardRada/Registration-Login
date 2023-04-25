@@ -5,6 +5,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatDialog } from '@angular/material/dialog';
 import { UpdatepopupComponent } from '../updatepopup/updatepopup.component';
+import { DeletepopupComponent } from '../deletepopup/deletepopup.component';
 
 @Component({
   selector: 'app-user',
@@ -40,11 +41,30 @@ export class UserComponent {
   ];
 
   updateUser(id: any) {
-    this.openDialog(id);
+    this.openUpdateUserDialog(id);
   }
 
-  openDialog(id: any) {
+  deleteUser(id: any) {
+    this.openDeleteUserDialog(id);
+  }
+
+  openUpdateUserDialog(id: any) {
     const popup = this.dialog.open(UpdatepopupComponent, {
+      enterAnimationDuration: '300ms',
+      exitAnimationDuration: '400ms',
+      width: '50%',
+      data: {
+        userId: id,
+      },
+    });
+
+    popup.afterClosed().subscribe((result) => {
+      this.loadUser();
+    });
+  }
+
+  openDeleteUserDialog(id: any) {
+    const popup = this.dialog.open(DeletepopupComponent, {
       enterAnimationDuration: '300ms',
       exitAnimationDuration: '400ms',
       width: '50%',
