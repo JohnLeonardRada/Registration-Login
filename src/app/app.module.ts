@@ -13,9 +13,10 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { UserComponent } from './user/user.component'
 import { UpdatepopupComponent } from './updatepopup/updatepopup.component';
+import { DeletepopupComponent } from './deletepopup/deletepopup.component';
 
 @NgModule({
-  declarations: [AppComponent, RegisterComponent, LoginComponent, HomeComponent, UserComponent, UpdatepopupComponent],
+  declarations: [AppComponent, RegisterComponent, LoginComponent, HomeComponent, UserComponent, UpdatepopupComponent, DeletepopupComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
